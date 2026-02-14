@@ -1,42 +1,124 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Benim Sitem</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      background: #0066ff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    .btn:hover {
-      background: #004ecc;
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      margin-top: 20px;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Spor Arşivi</title>
+
+<!-- GoatCounter -->
+<script data-goatcounter="https://SENINADIN.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sol Menü */
+.sidebar {
+  width: 220px;
+  background: #0b1c2d;
+  color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 12px 0;
+  padding: 10px;
+  background: #123456;
+  border-radius: 5px;
+}
+
+.sidebar a:hover {
+  background: #1d4f91;
+}
+
+/* İçerik */
+.content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Açıklama */
+.description {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Sayaç */
+.counter {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Copyright */
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  font-size: 13px;
+  color: #aaa;
+}
+</style>
 </head>
+
 <body>
 
-<h1>Hoş geldin 👋</h1>
+<div class="container">
 
-<a class="btn" href="https://example.com" target="_self">
-  Sayfayı Aç
-</a>
+  <!-- SOL MENÜ -->
+  <div class="sidebar">
+    <a href="#">Futbol</a>
+    <a href="#">Basketbol</a>
+    <a href="#">Voleybol</a>
+    <a href="#">Hentbol</a>
+    <a href="#">Olimpiyatlar</a>
 
-<iframe src="https://example.com"></iframe>
+    <div class="copyright">
+      © 2026 Mehmet Can
+    </div>
+  </div>
+
+  <!-- ANA İÇERİK -->
+  <div class="content">
+
+    <div class="description">
+      <h2>Spor Arşivi</h2>
+      <p>
+        Sitemizde futbol, basketbol, voleybol ve hentbol branşlarında
+        Türkiye’de ve uluslararası alanda düzenlenen önemli turnuvaların
+        sonuçları yer almaktadır.
+      </p>
+    </div>
+
+    <p>
+      Sol menüden branş seçerek ilgili turnuva ve organizasyon sonuçlarına
+      ulaşabilirsiniz.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- Sayaç Yazısı -->
+<div class="counter">
+  Toplam ziyaretçi sayısı izlenmektedir
+</div>
 
 </body>
 </html>

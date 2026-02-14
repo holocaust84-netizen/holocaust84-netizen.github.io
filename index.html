@@ -4,147 +4,90 @@
 <meta charset="UTF-8">
 <title>Spor Arşivi</title>
 
-<!-- GoatCounter -->
-<script
-  data-goatcounter="https://holocaust84-netizen.goatcounter.com/count"
-  data-goatcounter-settings='{"no_onload": true}'
-  async src="//gc.zgo.at/count.js">
-</script>
-
-
-<<style>
+<style>
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-noscript {
-  display: none !important;
-}
-</style>
-
-
-/* Layout */
-.container {
-  display: flex;
-  min-height: 100vh;
-}
-
-/* Sol Menü */
-.sidebar {
-  width: 220px;
-  background: #0b1c2d;
-  color: white;
-  padding: 20px;
-  position: relative;
+/* SOL SABİT MENÜ */
+#menu {
+  position:fixed;
+  left:0;
+  top:0;
+  width:180px;
+  height:100%;
+  background:#eaeaea;
+  padding:10px;
+  box-sizing:border-box;
+  font-size:14px;
 }
 
-.sidebar a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin: 12px 0;
-  padding: 10px;
-  background: #123456;
-  border-radius: 5px;
+#menu a {
+  display:block;
+  margin-bottom:10px;
+  color:#000;
+  text-decoration:none;
 }
 
-.sidebar a:hover {
-  background: #1d4f91;
+#menu a:hover {
+  text-decoration:underline;
 }
 
-/* İçerik */
-.content {
-  flex: 1;
-  padding: 30px;
+/* ORTA İÇERİK */
+#content {
+  margin-left:200px;
+  padding:20px;
 }
 
-/* Açıklama */
-.description {
-  background: #f4f4f4;
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-/* Sayaç */
-.counter {
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  font-size: 14px;
-  color: #555;
-}
-
-/* Copyright */
-.copyright {
-  position: absolute;
-  bottom: 10px;
-  left: 20px;
-  font-size: 13px;
-  color: #aaa;
+/* ZİYARETÇİ */
+#visitor {
+  position:fixed;
+  right:10px;
+  bottom:10px;
+  font-size:12px;
+  color:#555;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
-
-  <!-- SOL MENÜ -->
-  <div class="sidebar">
-    <a href="futbol.html" target="_self">Futbol</a>
-    <a href="#">Basketbol</a>
-    <a href="#">Voleybol</a>
-    <a href="#">Hentbol</a>
-    <a href="#">Olimpiyatlar</a>
-
-    <div class="copyright">
-      © 2026 Mehmet Can Sönmezer
-    </div>
-  </div>
-
-  <!-- ANA İÇERİK -->
-  <div class="content">
-
-    <div class="description">
-      <h2>Spor Arşivi</h2>
-      <p>
-        Sitemizde futbol, basketbol, voleybol ve hentbol branşlarında
-        Türkiye’de ve uluslararası alanda düzenlenen önemli turnuvaların
-        sonuçları yer almaktadır.
-      </p>
-    </div>
-
-    <p>
-      Sol menüden branş seçerek ilgili turnuva ve organizasyon sonuçlarına
-      ulaşabilirsiniz.
-    </p>
-
-  </div>
-
+<!-- SOL MENÜ -->
+<div id="menu">
+  <b>Menü</b><br><br>
+  <a href="index.html">Ana Sayfa</a>
+  <a href="futbol.html">Futbol</a>
+  <a href="basketbol.html">Basketbol</a>
+  <a href="voleybol.html">Voleybol</a>
+  <a href="hentbol.html">Hentbol</a>
+  <a href="olimpiyatlar.html">Olimpiyatlar</a>
 </div>
 
-<!-- Sayaç Yazısı -->
-<div class="counter">
+<!-- ORTA ALAN -->
+<div id="content">
+  <h2>Spor Arşivi</h2>
 
+  <p>
+    Sitemizde futbol, basketbol, voleybol ve hentbol branşlarında
+    Türkiye'de ve uluslararası alanda düzenlenen önemli turnuvaların
+    sonuçları yer almaktadır.
+  </p>
+
+  <p>
+    Sol menüden ilgili branşı seçerek arşivlere ulaşabilirsiniz.
+  </p>
 </div>
-<!-- Sağ alt sayaç -->
-<div id="visitor-counter">
-  Ziyaretçi: <span id="gc-count">yükleniyor…</span>
+
+<!-- ZİYARETÇİ -->
+<div id="visitor">
+  Toplam ziyaretçi: <span data-goatcounter-total>—</span>
 </div>
 
-<script>
-fetch("https://holocaust84-netizen.goatcounter.com/counter.json")
-  .then(r => r.json())
-  .then(d => {
-    document.getElementById("gc-count").textContent = d.count;
-  })
-  .catch(err => {
-    document.getElementById("gc-count").textContent = "–";
-  });
-</script>
-
+<!-- GOATCOUNTER -->
+<script data-goatcounter="https://holocaust84-netizen.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>

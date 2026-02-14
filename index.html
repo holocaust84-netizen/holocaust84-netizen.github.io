@@ -131,8 +131,20 @@ noscript {
 </div>
 <!-- Sağ alt sayaç -->
 <div id="visitor-counter">
-  Ziyaretçi: <span id="gc-count">–</span>
+  Ziyaretçi: <span id="gc-count">yükleniyor…</span>
 </div>
+
+<script>
+fetch("https://holocaust84-netizen.goatcounter.com/counter.json")
+  .then(r => r.json())
+  .then(d => {
+    document.getElementById("gc-count").textContent = d.count;
+  })
+  .catch(err => {
+    document.getElementById("gc-count").textContent = "–";
+  });
+</script>
+
 
 </body>
 </html>

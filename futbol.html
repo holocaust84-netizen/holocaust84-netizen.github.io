@@ -2,111 +2,118 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<title>Spor Arşivi - Futbol</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Futbol Arşivi</title>
 <style>
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        display: flex;
+    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
+
+    body { display:flex; min-height:100vh; }
+
+    .sidebar {
+        width:220px;
+        background-color:#2c3e50;
+        color:white;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-between;
+        padding:20px 10px;
     }
-    #sidebar {
-        width: 220px;
-        background-color: #f1f1f1;
-        padding: 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        min-height: 100vh;
+
+    .menu-top { text-align:center; font-weight:bold; font-size:18px; margin-bottom:20px; }
+
+    .menu-links a {
+        display:block;
+        color:white;
+        text-decoration:none;
+        margin:10px 0;
+        padding:8px 10px;
+        border-radius:4px;
+        transition:0.3s;
     }
-    #sidebar .title {
-        text-align: center;
-        font-weight: bold;
-        font-size: 20px;
-        margin-bottom: 20px;
-        width: 100%;
+
+    .menu-links a:hover { background-color:#34495e; }
+
+    .sidebar-bottom { font-size:12px; line-height:1.5; }
+
+    .content { flex:1; padding:30px; }
+
+    .visitor-counter {
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        font-size:12px;
+        background:#f1f1f1;
+        padding:5px 10px;
+        border-radius:5px;
+        box-shadow:0 0 5px rgba(0,0,0,0.2);
     }
-    #sidebar ul {
-        list-style-type: none;
-        padding: 0;
-        width: 100%;
-    }
-    #sidebar ul li {
-        margin-bottom: 10px;
-    }
-    #sidebar ul li a {
-        text-decoration: none;
-        color: #333;
-        display: block;
-        width: 100%;
-    }
-    #sidebar ul li a:hover {
-        color: #007BFF;
-    }
-    #main {
-        flex: 1;
-        padding: 20px;
-        min-height: 80vh;
-    }
-    footer {
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-        background-color: #f1f1f1;
-        font-size: 14px;
+
+    @media(max-width:768px){
+        body { flex-direction:column; }
+        .sidebar { width:100%; flex-direction:row; justify-content:space-around; padding:10px 0; }
+        .menu-links a { margin:0 5px; }
+        .content { padding:15px; }
+        .sidebar-bottom { display:none; }
     }
 </style>
 </head>
 <body>
 
-<!-- Sol Menü -->
-<div id="sidebar">
-    <div class="title">Menü</div>
+<div class="sidebar">
+    <div>
+        <div class="menu-top">MENÜ</div>
+        <div class="menu-links">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="futbol.html">Futbol</a>
+            <a href="#">Basketbol</a>
+            <a href="#">Voleybol</a>
+            <a href="#">Hentbol</a>
+            <a href="#">Olimpiyatlar</a>
+        </div>
+    </div>
+    <div class="sidebar-bottom">
+        © Mehmet Can Sönmezer 2026
+    </div>
+</div>
+
+<div class="content">
+    <h1>Futbol</h1>
     <ul>
-        <li><a href="index.html">Ana Sayfa</a></li>
-        <li><a href="futbol.html">Futbol</a></li>
-        <li><a href="basketbol.html">Basketbol</a></li>
-        <li><a href="voleybol.html">Voleybol</a></li>
-        <li><a href="hentbol.html">Hentbol</a></li>
-        <li><a href="olimpiyatlar.html">Olimpiyatlar</a></li>
+        <li><a href="#">1930</a></li>
+        <li><a href="#">1934</a></li>
+        <li><a href="#">1938</a></li>
+        <li><a href="#">1950</a></li>
+        <li><a href="#">1954</a></li>
+        <li><a href="#">1958</a></li>
+        <li><a href="#">1962</a></li>
+        <li><a href="#">1966</a></li>
+        <li><a href="#">1970</a></li>
+        <li><a href="#">1974</a></li>
+        <li><a href="#">1978</a></li>
+        <li><a href="#">1982</a></li>
+        <li><a href="#">1986</a></li>
+        <li><a href="#">1990</a></li>
+        <li><a href="#">1994</a></li>
+        <li><a href="#">1998</a></li>
+        <li><a href="#">2002</a></li>
+        <li><a href="#">2006</a></li>
+        <li><a href="#">2010</a></li>
+        <li><a href="#">2014</a></li>
+        <li><a href="#">2018</a></li>
+        <li><a href="#">2022</a></li>
     </ul>
 </div>
 
-<!-- Orta İçerik -->
-<div id="main">
-    <h1>Futbol Arşivi</h1>
-    <p>Sitemizde Türkiye ve uluslararası alanda düzenlenen önemli futbol turnuvalarının sonuçları yer almaktadır.</p>
-    <ul id="years-list">
-        <li><a href="pdfs/futbol1930.pdf" target="_blank">1930</a></li>
-        <li><a href="pdfs/futbol1934.pdf" target="_blank">1934</a></li>
-        <li><a href="pdfs/futbol1938.pdf" target="_blank">1938</a></li>
-        <li><a href="pdfs/futbol1950.pdf" target="_blank">1950</a></li>
-        <li><a href="pdfs/futbol1954.pdf" target="_blank">1954</a></li>
-        <li><a href="pdfs/futbol1958.pdf" target="_blank">1958</a></li>
-        <li><a href="pdfs/futbol1962.pdf" target="_blank">1962</a></li>
-        <li><a href="pdfs/futbol1966.pdf" target="_blank">1966</a></li>
-        <li><a href="pdfs/futbol1970.pdf" target="_blank">1970</a></li>
-        <li><a href="pdfs/futbol1974.pdf" target="_blank">1974</a></li>
-        <li><a href="pdfs/futbol1978.pdf" target="_blank">1978</a></li>
-        <li><a href="pdfs/futbol1982.pdf" target="_blank">1982</a></li>
-        <li><a href="pdfs/futbol1986.pdf" target="_blank">1986</a></li>
-        <li><a href="pdfs/futbol1990.pdf" target="_blank">1990</a></li>
-        <li><a href="pdfs/futbol1994.pdf" target="_blank">1994</a></li>
-        <li><a href="pdfs/futbol1998.pdf" target="_blank">1998</a></li>
-        <li><a href="pdfs/futbol2002.pdf" target="_blank">2002</a></li>
-        <li><a href="pdfs/futbol2006.pdf" target="_blank">2006</a></li>
-        <li><a href="pdfs/futbol2010.pdf" target="_blank">2010</a></li>
-        <li><a href="pdfs/futbol2014.pdf" target="_blank">2014</a></li>
-        <li><a href="pdfs/futbol2018.pdf" target="_blank">2018</a></li>
-        <li><a href="pdfs/futbol2022.pdf" target="_blank">2022</a></li>
-        <li><a href="pdfs/futbol2024.pdf" target="_blank">2024</a></li>
-    </ul>
+<div class="visitor-counter">
+    Kullanıcı: holocaust84-netizen | Ziyaretçi: <span id="visitor-count">0</span>
 </div>
 
-<!-- Footer -->
-<footer>
-    &copy; 2026 Mehmet Can Sönmezer | Ziyaretçi Sayısı: <span id="visitor-count">0</span>
-</footer>
+<script>
+    let count = localStorage.getItem('visitorCount') || 0;
+    count++;
+    localStorage.setItem('visitorCount', count);
+    document.getElementById('visitor-count').innerText = count;
+</script>
 
 </body>
 </html>

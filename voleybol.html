@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voleybol Arşivi</title>
+<style>
+body { margin:0; font-family: Arial, sans-serif; }
+.container { display: flex; min-height: 100vh; flex-wrap: wrap; }
+nav { width: 220px; background:#333; color:#fff; padding:10px; flex-shrink:0; }
+nav h2 { margin-top:0; font-size:18px; }
+nav ul { list-style:none; padding:0; }
+nav ul li { margin:10px 0; }
+nav ul li a { color:#fff; text-decoration:none; }
+nav ul li a:hover { text-decoration: underline; }
+main { flex:1; padding:20px; min-width:250px; }
+footer { position:fixed; bottom:10px; left:10px; font-size:14px; }
+#visitor-counter { position: fixed; bottom: 10px; right: 10px; font-size:14px; }
+
+/* Yıllar */
+.year-links { display:flex; flex-wrap: wrap; gap:8px; }
+.year-links a { text-decoration:none; color:#333; padding:2px 5px; border-radius:4px; transition: background 0.2s, color 0.2s; }
+.year-links a:hover { background:#333; color:#fff; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Sol Menü -->
+  <nav>
+    <h2>MENÜ</h2>
+    <ul>
+      <li><a href="index.html">ANA SAYFA</a></li>
+      <li><a href="futbol.html">FUTBOL</a></li>
+      <li><a href="basketbol.html">BASKETBOL</a></li>
+      <li><a href="voleybol.html">VOLEYBOL</a></li>
+      <li><a href="hentbol.html">HENTBOL</a></li>
+      <li><a href="olimpiyatlar.html">OLİMPİYATLAR</a></li>
+    </ul>
+    <footer>© Mehmet Can Sönmezer 2026</footer>
+  </nav>
+
+  <!-- Orta Bölüm -->
+  <main>
+    <h1>Voleybol</h1>
+    <div class="year-links">
+      <!-- Verilen yıllar linkli -->
+      <a href="#">1948</a> <a href="#">1949</a> <a href="#">1950</a> <a href="#">1951</a> <a href="#">1952</a> 
+      <a href="#">1955</a> <a href="#">1956</a> <a href="#">1958</a> <a href="#">1960</a>
+      <!-- 1960 sonrası basketbol ile aynı -->
+      <a href="#">1961</a> <a href="#">1962</a> <a href="#">1963</a> <a href="#">1964</a> <a href="#">1965</a> <a href="#">1966</a> <a href="#">1967</a> <a href="#">1968</a> <a href="#">1969</a>
+      <a href="#">1970</a> <a href="#">1971</a> <a href="#">1972</a> <a href="#">1973</a> <a href="#">1974</a> <a href="#">1975</a> <a href="#">1976</a> <a href="#">1977</a> <a href="#">1978</a> <a href="#">1979</a>
+      <a href="#">1980</a> <a href="#">1981</a> <a href="#">1982</a> <a href="#">1983</a> <a href="#">1984</a> <a href="#">1985</a> <a href="#">1986</a> <a href="#">1987</a> <a href="#">1988</a> <a href="#">1989</a>
+      <a href="#">1990</a> <a href="#">1991</a> <a href="#">1992</a> <a href="#">1993</a> <a href="#">1994</a> <a href="#">1995</a> <a href="#">1996</a> <a href="#">1997</a> <a href="#">1998</a> <a href="#">1999</a>
+      <a href="#">2000</a> <a href="#">2001</a> <a href="#">2002</a> <a href="#">2003</a> <a href="#">2004</a> <a href="#">2005</a> <a href="#">2006</a> <a href="#">2007</a> <a href="#">2008</a> <a href="#">2009</a>
+      <a href="#">2010</a> <a href="#">2011</a> <a href="#">2012</a> <a href="#">2013</a> <a href="#">2014</a> <a href="#">2015</a> <a href="#">2016</a> <a href="#">2017</a> <a href="#">2018</a> <a href="#">2019</a>
+      <a href="#">2020</a> <a href="#">2021</a> <a href="#">2022</a> <a href="#">2023</a> <a href="#">2024</a> <a href="#">2025</a>
+    </div>
+  </main>
+
+</div>
+
+<!-- Ziyaretçi Sayacı -->
+<div id="visitor-counter">Ziyaretçi Sayısı: <span id="count">0</span></div>
+
+<script>
+const USERNAME = 'holocaust84-netizen';
+const STORAGE_KEY = 'my_visitor_counter';
+let totalCount = localStorage.getItem(STORAGE_KEY);
+if (!totalCount) totalCount = 0;
+
+const visitedKey = 'visited_' + USERNAME;
+const hasVisited = localStorage.getItem(visitedKey);
+
+if (!hasVisited) {
+    totalCount = parseInt(totalCount) + 1;
+    localStorage.setItem(STORAGE_KEY, totalCount);
+    localStorage.setItem(visitedKey, 'true');
+}
+document.getElementById('count').textContent = totalCount;
+</script>
+
+</body>
+</html>
 

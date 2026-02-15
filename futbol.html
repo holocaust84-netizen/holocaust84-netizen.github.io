@@ -1,95 +1,112 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Spor Arşivi - Futbol</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        #sidebar {
-            width: 220px;
-            background-color: #f1f1f1;
-            height: 100vh;
-            float: left;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        #sidebar div.title {
-            text-align: center;
-            font-weight: bold;
-            font-size: 20px;
-            margin-bottom: 20px;
-        }
-        #sidebar ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        #sidebar ul li {
-            margin-bottom: 10px;
-        }
-        #sidebar ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-        #sidebar ul li a:hover {
-            color: #007BFF;
-        }
-        #main {
-            margin-left: 240px;
-            padding: 20px;
-            min-height: 80vh;
-        }
-        footer {
-            clear: both;
-            text-align: center;
-            padding: 10px;
-            background-color: #f1f1f1;
-            font-size: 14px;
-            position: relative;
-        }
-        .visitor-counter {
-            font-weight: bold;
-            margin-left: 10px;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Spor Arşivi - Futbol</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+    }
+    #sidebar {
+        width: 220px;
+        background-color: #f1f1f1;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        min-height: 100vh;
+    }
+    #sidebar .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    #sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        width: 100%;
+    }
+    #sidebar ul li {
+        margin-bottom: 10px;
+    }
+    #sidebar ul li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        width: 100%;
+    }
+    #sidebar ul li a:hover {
+        color: #007BFF;
+    }
+    #main {
+        flex: 1;
+        padding: 20px;
+        min-height: 80vh;
+    }
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        background-color: #f1f1f1;
+        font-size: 14px;
+    }
+</style>
 </head>
 <body>
-    <!-- Sol Menü -->
-    <div id="sidebar">
-        <div class="title">Menü</div>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="futbol.html">Futbol</a></li>
-            <li><a href="basketbol.html">Basketbol</a></li>
-            <li><a href="voleybol.html">Voleybol</a></li>
-            <li><a href="hentbol.html">Hentbol</a></li>
-            <li><a href="olimpiyatlar.html">Olimpiyatlar</a></li>
-        </ul>
-    </div>
 
-    <!-- Orta İçerik -->
-    <div id="main">
-        <h1>Futbol Arşivi</h1>
-        <p>Sitemizde Türkiye ve uluslararası alanda düzenlenen önemli futbol turnuvalarının sonuçları yer almaktadır.</p>
-        <ul>
-            <li><a href="pdfs/futbol1930.pdf" target="_blank">1930</a></li>
-            <li><a href="pdfs/futbol1934.pdf" target="_blank">1934</a></li>
-            <li><a href="pdfs/futbol1938.pdf" target="_blank">1938</a></li>
-            <!-- ... 2024'e kadar devam edecek linkler ... -->
-        </ul>
-    </div>
+<!-- Sol Menü -->
+<div id="sidebar">
+    <div class="title">Menü</div>
+    <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="futbol.html">Futbol</a></li>
+        <li><a href="basketbol.html">Basketbol</a></li>
+        <li><a href="voleybol.html">Voleybol</a></li>
+        <li><a href="hentbol.html">Hentbol</a></li>
+        <li><a href="olimpiyatlar.html">Olimpiyatlar</a></li>
+    </ul>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        &copy; 2026 Mehmet Can Sönmezer | Ziyaretçi Sayısı: <span class="visitor-counter">0</span>
-    </footer>
+<!-- Orta İçerik -->
+<div id="main">
+    <h1>Futbol Arşivi</h1>
+    <p>Sitemizde Türkiye ve uluslararası alanda düzenlenen önemli futbol turnuvalarının sonuçları yer almaktadır.</p>
+    <ul id="years-list">
+        <li><a href="pdfs/futbol1930.pdf" target="_blank">1930</a></li>
+        <li><a href="pdfs/futbol1934.pdf" target="_blank">1934</a></li>
+        <li><a href="pdfs/futbol1938.pdf" target="_blank">1938</a></li>
+        <li><a href="pdfs/futbol1950.pdf" target="_blank">1950</a></li>
+        <li><a href="pdfs/futbol1954.pdf" target="_blank">1954</a></li>
+        <li><a href="pdfs/futbol1958.pdf" target="_blank">1958</a></li>
+        <li><a href="pdfs/futbol1962.pdf" target="_blank">1962</a></li>
+        <li><a href="pdfs/futbol1966.pdf" target="_blank">1966</a></li>
+        <li><a href="pdfs/futbol1970.pdf" target="_blank">1970</a></li>
+        <li><a href="pdfs/futbol1974.pdf" target="_blank">1974</a></li>
+        <li><a href="pdfs/futbol1978.pdf" target="_blank">1978</a></li>
+        <li><a href="pdfs/futbol1982.pdf" target="_blank">1982</a></li>
+        <li><a href="pdfs/futbol1986.pdf" target="_blank">1986</a></li>
+        <li><a href="pdfs/futbol1990.pdf" target="_blank">1990</a></li>
+        <li><a href="pdfs/futbol1994.pdf" target="_blank">1994</a></li>
+        <li><a href="pdfs/futbol1998.pdf" target="_blank">1998</a></li>
+        <li><a href="pdfs/futbol2002.pdf" target="_blank">2002</a></li>
+        <li><a href="pdfs/futbol2006.pdf" target="_blank">2006</a></li>
+        <li><a href="pdfs/futbol2010.pdf" target="_blank">2010</a></li>
+        <li><a href="pdfs/futbol2014.pdf" target="_blank">2014</a></li>
+        <li><a href="pdfs/futbol2018.pdf" target="_blank">2018</a></li>
+        <li><a href="pdfs/futbol2022.pdf" target="_blank">2022</a></li>
+        <li><a href="pdfs/futbol2024.pdf" target="_blank">2024</a></li>
+    </ul>
+</div>
 
-    <!-- Basit Ziyaretçi Sayacı Script (0 ile başlıyor, sunucuda PHP vs. yoksa sadece gösterim) -->
-    <script>
-        // Eğer sunucu tarafı yoksa 0 gösteriyor, çizgi değil
-        document.querySelector('.visitor-counter').textContent = '0';
-    </script>
+<!-- Footer -->
+<footer>
+    &copy; 2026 Mehmet Can Sönmezer | Ziyaretçi Sayısı: <span id="visitor-count">0</span>
+</footer>
+
 </body>
 </html>

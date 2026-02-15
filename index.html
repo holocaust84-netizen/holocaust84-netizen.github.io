@@ -5,111 +5,62 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Spor Arşivi</title>
 <style>
-    /* Genel sıfırlama */
-    * { margin:0; padding:0; box-sizing:border-box; font-family: Arial, sans-serif; }
-
-    body { display:flex; min-height:100vh; }
-
-    /* Sol menü */
-    .sidebar {
-        width:220px;
-        background-color:#2c3e50;
-        color:white;
-        display:flex;
-        flex-direction:column;
-        justify-content:space-between;
-        padding:20px 10px;
-    }
-
-    .menu-top {
-        text-align:center;
-        font-weight:bold;
-        font-size:18px;
-        margin-bottom:20px;
-    }
-
-    .menu-links a {
-        display:block;
-        color:white;
-        text-decoration:none;
-        margin:10px 0;
-        padding:8px 10px;
-        border-radius:4px;
-        transition:0.3s;
-    }
-
-    .menu-links a:hover {
-        background-color:#34495e;
-    }
-
-    .sidebar-bottom {
-        font-size:12px;
-        line-height:1.5;
-    }
-
-    /* Ana içerik */
-    .content {
-        flex:1;
-        padding:30px;
-    }
-
-    /* Ziyaretçi sayacı sağ altta */
-    .visitor-counter {
-        position:fixed;
-        bottom:10px;
-        right:10px;
-        font-size:12px;
-        background:#f1f1f1;
-        padding:5px 10px;
-        border-radius:5px;
-        box-shadow:0 0 5px rgba(0,0,0,0.2);
-    }
-
-    /* Mobil uyum */
-    @media(max-width:768px){
-        body { flex-direction:column; }
-        .sidebar { width:100%; flex-direction:row; justify-content:space-around; padding:10px 0; }
-        .menu-links a { margin:0 5px; }
-        .content { padding:15px; }
-        .sidebar-bottom { display:none; }
-    }
+body { margin:0; font-family: Arial, sans-serif; }
+.container { display: flex; min-height: 100vh; }
+nav { width: 220px; background:#333; color:#fff; padding:10px; }
+nav h2 { margin-top:0; font-size:18px; }
+nav ul { list-style:none; padding:0; }
+nav ul li { margin:10px 0; }
+nav ul li a { color:#fff; text-decoration:none; }
+main { flex:1; padding:20px; }
+footer { position:fixed; bottom:10px; left:10px; font-size:14px; }
+#visitor-counter { position: fixed; bottom: 10px; right: 10px; font-size:14px; }
 </style>
 </head>
 <body>
+<div class="container">
 
-<div class="sidebar">
-    <div>
-        <div class="menu-top">MENÜ</div>
-        <div class="menu-links">
-            <a href="index.html">Ana Sayfa</a>
-            <a href="futbol.html">Futbol</a>
-            <a href="#">Basketbol</a>
-            <a href="#">Voleybol</a>
-            <a href="#">Hentbol</a>
-            <a href="#">Olimpiyatlar</a>
-        </div>
-    </div>
-    <div class="sidebar-bottom">
-        © Mehmet Can Sönmezer 2026
-    </div>
-</div>
+  <!-- Sol Menü -->
+  <nav>
+    <h2>MENÜ</h2>
+    <ul>
+      <li><a href="index.html">ANA SAYFA</a></li>
+      <li><a href="futbol.html">FUTBOL</a></li>
+      <li><a href="basketbol.html">BASKETBOL</a></li>
+      <li><a href="voleybol.html">VOLEYBOL</a></li>
+      <li><a href="hentbol.html">HENTBOL</a></li>
+      <li><a href="olimpiyatlar.html">OLİMPİYATLAR</a></li>
+    </ul>
+    <footer>© Mehmet Can Sönmezer 2026</footer>
+  </nav>
 
-<div class="content">
+  <!-- Orta Bölüm -->
+  <main>
     <h1>Spor Arşivi</h1>
     <p>Sitemizde futbol, basketbol, voleybol ve hentbol branşlarında Türkiye'de ve uluslararası alanda düzenlenen önemli turnuvaların sonuçları yer almaktadır.</p>
     <p>Sol menüden ilgili branşı seçerek arşivlere ulaşabilirsiniz.</p>
+  </main>
+
 </div>
 
-<div class="visitor-counter">
-    Kullanıcı: holocaust84-netizen | Ziyaretçi: <span id="visitor-count">0</span>
-</div>
+<!-- Ziyaretçi Sayacı -->
+<div id="visitor-counter">Ziyaretçi Sayısı: <span id="count">0</span></div>
 
 <script>
-    // Örnek sayaç (sunucu olmadan tarayıcı bazlı)
-    let count = localStorage.getItem('visitorCount') || 0;
-    count++;
-    localStorage.setItem('visitorCount', count);
-    document.getElementById('visitor-count').innerText = count;
+const USERNAME = 'holocaust84-netizen';
+const STORAGE_KEY = 'my_visitor_counter';
+let totalCount = localStorage.getItem(STORAGE_KEY);
+if (!totalCount) totalCount = 0;
+
+const visitedKey = 'visited_' + USERNAME;
+const hasVisited = localStorage.getItem(visitedKey);
+
+if (!hasVisited) {
+    totalCount = parseInt(totalCount) + 1;
+    localStorage.setItem(STORAGE_KEY, totalCount);
+    localStorage.setItem(visitedKey, 'true');
+}
+document.getElementById('count').textContent = totalCount;
 </script>
 
 </body>

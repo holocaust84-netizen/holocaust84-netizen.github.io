@@ -5,221 +5,80 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Basketbol Arşivi</title>
 <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-  }
-  /* Sol Menü */
-  .sidebar {
-    width: 200px;
-    background-color: #2c3e50;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .menu-top {
-    padding: 15px;
-    font-weight: bold;
-    background-color: #1a252f;
-    text-align: center;
-    font-size: 18px;
-  }
-  .menu-links {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-  }
-  .menu-links a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 0;
-    transition: background-color 0.2s;
-  }
-  .menu-links a:hover {
-    background-color: #34495e;
-  }
-  .menu-bottom {
-    padding: 10px;
-    font-size: 12px;
-    text-align: center;
-  }
-  /* Orta içerik */
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
-  .year-links {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .year-links a {
-    margin: 3px 8px;
-    text-decoration: none;
-    color: #2980b9;
-    transition: color 0.2s;
-  }
-  .year-links a:hover {
-    color: #c0392b;
-  }
-  /* Alt copyright ve sayaç */
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    font-size: 12px;
-    background-color: #ecf0f1;
-  }
+body { margin:0; font-family: Arial, sans-serif; }
+.container { display: flex; min-height: 100vh; flex-wrap: wrap; }
+nav { width: 220px; background:#333; color:#fff; padding:10px; flex-shrink:0; }
+nav h2 { margin-top:0; font-size:18px; }
+nav ul { list-style:none; padding:0; }
+nav ul li { margin:10px 0; }
+nav ul li a { color:#fff; text-decoration:none; }
+nav ul li a:hover { text-decoration: underline; }
+main { flex:1; padding:20px; min-width:250px; }
+footer { position:fixed; bottom:10px; left:10px; font-size:14px; }
+#visitor-counter { position: fixed; bottom: 10px; right: 10px; font-size:14px; }
 
-  /* Mobil uyum */
-  @media(max-width: 768px) {
-    body {
-      flex-direction: column;
-    }
-    .sidebar {
-      width: 100%;
-      flex-direction: row;
-      overflow-x: auto;
-    }
-    .menu-links {
-      flex-direction: row;
-    }
-    .menu-links a {
-      padding: 10px;
-      white-space: nowrap;
-    }
-  }
+/* Yıllar */
+.year-links { display:flex; flex-wrap: wrap; gap:8px; }
+.year-links a { text-decoration:none; color:#333; padding:2px 5px; border-radius:4px; transition: background 0.2s, color 0.2s; }
+.year-links a:hover { background:#333; color:#fff; }
 </style>
 </head>
 <body>
+<div class="container">
+
   <!-- Sol Menü -->
-  <div class="sidebar">
-    <div class="menu-top">MENÜ</div>
-    <div class="menu-links">
-      <a href="index.html">ANA SAYFA</a>
-      <a href="futbol.html">FUTBOL</a>
-      <a href="basketbol.html">BASKETBOL</a>
-      <a href="voleybol.html">VOLEYBOL</a>
-      <a href="hentbol.html">HENTBOL</a>
-      <a href="olimpiyatlar.html">OLİMPİYATLAR</a>
-    </div>
-    <div class="menu-bottom">
-      &copy; Mehmet Can Sönmezer 2026
-    </div>
-  </div>
+  <nav>
+    <h2>MENÜ</h2>
+    <ul>
+      <li><a href="index.html">ANA SAYFA</a></li>
+      <li><a href="futbol.html">FUTBOL</a></li>
+      <li><a href="basketbol.html">BASKETBOL</a></li>
+      <li><a href="voleybol.html">VOLEYBOL</a></li>
+      <li><a href="hentbol.html">HENTBOL</a></li>
+      <li><a href="olimpiyatlar.html">OLİMPİYATLAR</a></li>
+    </ul>
+    <footer>© Mehmet Can Sönmezer 2026</footer>
+  </nav>
 
-  <!-- Orta İçerik -->
-  <div class="content">
-    <h2>Basketbol</h2>
+  <!-- Orta Bölüm -->
+  <main>
+    <h1>Basketbol</h1>
     <div class="year-links">
-      <!-- Verilen yıllar, linkli -->
-      <a href="#">1935</a>
-      <a href="#">1937</a>
-      <a href="#">1938</a>
-      <a href="#">1939</a>
-      <a href="#">1946</a>
-      <a href="#">1947</a>
-      <a href="#">1949</a>
-      <a href="#">1950</a>
-      <a href="#">1951</a>
-      <a href="#">1952</a>
-      <a href="#">1953</a>
-      <a href="#">1954</a>
-      <a href="#">1955</a>
-      <a href="#">1956</a>
-      <a href="#">1957</a>
-      <a href="#">1958</a>
-      <a href="#">1959</a>
-      <a href="#">1960</a>
-      <a href="#">1961</a>
-      <a href="#">1962</a>
-      <a href="#">1963</a>
-      <a href="#">1964</a>
-      <a href="#">1965</a>
-      <a href="#">1966</a>
-      <a href="#">1967</a>
-      <a href="#">1968</a>
-      <a href="#">1969</a>
-      <a href="#">1970</a>
-      <a href="#">1971</a>
-      <a href="#">1972</a>
-      <a href="#">1973</a>
-      <a href="#">1974</a>
-      <a href="#">1975</a>
-      <a href="#">1976</a>
-      <a href="#">1977</a>
-      <a href="#">1978</a>
-      <a href="#">1979</a>
-      <a href="#">1980</a>
-      <a href="#">1981</a>
-      <a href="#">1982</a>
-      <a href="#">1983</a>
-      <a href="#">1984</a>
-      <a href="#">1985</a>
-      <a href="#">1986</a>
-      <a href="#">1987</a>
-      <a href="#">1988</a>
-      <a href="#">1989</a>
-      <a href="#">1990</a>
-      <a href="#">1991</a>
-      <a href="#">1992</a>
-      <a href="#">1993</a>
-      <a href="#">1994</a>
-      <a href="#">1995</a>
-      <a href="#">1996</a>
-      <a href="#">1997</a>
-      <a href="#">1998</a>
-      <a href="#">1999</a>
-      <a href="#">2000</a>
-      <a href="#">2001</a>
-      <a href="#">2002</a>
-      <a href="#">2003</a>
-      <a href="#">2004</a>
-      <a href="#">2005</a>
-      <a href="#">2006</a>
-      <a href="#">2007</a>
-      <a href="#">2008</a>
-      <a href="#">2009</a>
-      <a href="#">2010</a>
-      <a href="#">2011</a>
-      <a href="#">2012</a>
-      <a href="#">2013</a>
-      <a href="#">2014</a>
-      <a href="#">2015</a>
-      <a href="#">2016</a>
-      <a href="#">2017</a>
-      <a href="#">2018</a>
-      <a href="#">2019</a>
-      <a href="#">2020</a>
-      <a href="#">2021</a>
-      <a href="#">2022</a>
-      <a href="#">2023</a>
-      <a href="#">2024</a>
-      <a href="#">2025</a>
+      <!-- Verilen yıllar linkli -->
+      <a href="#">1935</a> <a href="#">1937</a> <a href="#">1938</a> <a href="#">1939</a>
+      <a href="#">1946</a> <a href="#">1947</a> <a href="#">1949</a>
+      <a href="#">1950</a> <a href="#">1951</a> <a href="#">1952</a> <a href="#">1953</a> <a href="#">1954</a> <a href="#">1955</a> <a href="#">1956</a> <a href="#">1957</a> <a href="#">1958</a> <a href="#">1959</a>
+      <a href="#">1960</a> <a href="#">1961</a> <a href="#">1962</a> <a href="#">1963</a> <a href="#">1964</a> <a href="#">1965</a> <a href="#">1966</a> <a href="#">1967</a> <a href="#">1968</a> <a href="#">1969</a>
+      <a href="#">1970</a> <a href="#">1971</a> <a href="#">1972</a> <a href="#">1973</a> <a href="#">1974</a> <a href="#">1975</a> <a href="#">1976</a> <a href="#">1977</a> <a href="#">1978</a> <a href="#">1979</a>
+      <a href="#">1980</a> <a href="#">1981</a> <a href="#">1982</a> <a href="#">1983</a> <a href="#">1984</a> <a href="#">1985</a> <a href="#">1986</a> <a href="#">1987</a> <a href="#">1988</a> <a href="#">1989</a>
+      <a href="#">1990</a> <a href="#">1991</a> <a href="#">1992</a> <a href="#">1993</a> <a href="#">1994</a> <a href="#">1995</a> <a href="#">1996</a> <a href="#">1997</a> <a href="#">1998</a> <a href="#">1999</a>
+      <a href="#">2000</a> <a href="#">2001</a> <a href="#">2002</a> <a href="#">2003</a> <a href="#">2004</a> <a href="#">2005</a> <a href="#">2006</a> <a href="#">2007</a> <a href="#">2008</a> <a href="#">2009</a>
+      <a href="#">2010</a> <a href="#">2011</a> <a href="#">2012</a> <a href="#">2013</a> <a href="#">2014</a> <a href="#">2015</a> <a href="#">2016</a> <a href="#">2017</a> <a href="#">2018</a> <a href="#">2019</a>
+      <a href="#">2020</a> <a href="#">2021</a> <a href="#">2022</a> <a href="#">2023</a> <a href="#">2024</a> <a href="#">2025</a>
     </div>
-  </div>
+  </main>
 
-  <!-- Alt Footer -->
-  <div class="footer">
-    <div>Ziyaretçi: holocaust84-netizen</div>
-    <div id="visitor-count">0</div>
-  </div>
+</div>
 
-  <!-- Basit sayaç örneği (futbol/index ile aynı) -->
-  <script>
-    // Tüm ziyaretler (ben hariç, cihaz farketmez)
-    const visitorKey = "holocaust84-netizen-counter";
-    let count = localStorage.getItem(visitorKey);
-    if (!count) {
-      count = 1; // ilk kez giriş
-    } else {
-      count = parseInt(count) + 1;
-    }
-    localStorage.setItem(visitorKey, count);
-    document.getElementById("visitor-count").innerText = count;
-  </script>
+<!-- Ziyaretçi Sayacı -->
+<div id="visitor-counter">Ziyaretçi Sayısı: <span id="count">0</span></div>
+
+<script>
+const USERNAME = 'holocaust84-netizen';
+const STORAGE_KEY = 'my_visitor_counter';
+let totalCount = localStorage.getItem(STORAGE_KEY);
+if (!totalCount) totalCount = 0;
+
+const visitedKey = 'visited_' + USERNAME;
+const hasVisited = localStorage.getItem(visitedKey);
+
+if (!hasVisited) {
+    totalCount = parseInt(totalCount) + 1;
+    localStorage.setItem(STORAGE_KEY, totalCount);
+    localStorage.setItem(visitedKey, 'true');
+}
+document.getElementById('count').textContent = totalCount;
+</script>
+
 </body>
 </html>

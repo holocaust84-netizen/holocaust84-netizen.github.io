@@ -45,39 +45,30 @@ h1 {
 </head>
 <body>
 
-<!-- Sol Menü Başlangıç -->
-<div id="side-menu" style="width:200px; background-color:#f0f0f0; float:left; padding:10px; font-family:Arial, sans-serif; font-size:14px;">
-  <ul style="list-style:none; padding:0; margin:0;">
-    <li style="margin-bottom:8px;">
-      <a href="index.html" style="text-decoration:none; color:#000; display:block; padding:8px; border-radius:4px;">Ana Sayfa</a>
-    </li>
-    <li style="margin-bottom:8px;">
-      <a href="futbol.html" style="text-decoration:none; color:#000; display:block; padding:8px; border-radius:4px;">Futbol</a>
-    </li>
-    <li style="margin-bottom:8px;">
-      <a href="basketbol.html" style="text-decoration:none; color:#000; display:block; padding:8px; border-radius:4px;">Basketbol</a>
-    </li>
-    <li style="margin-bottom:8px;">
-      <a href="voleybol.html" style="text-decoration:none; color:#000; display:block; padding:8px; border-radius:4px;">Voleybol</a>
-    </li>
-    <li style="margin-bottom:8px;">
-      <a href="hentbol.html" style="text-decoration:none; color:#000; display:block; padding:8px; border-radius:4px;">Hentbol</a>
-    </li>
-    <li style="margin-top:20px; font-weight:bold;">Olimpiyatlar</li>
-    <li style="margin-bottom:8px;">
-      <a href="olimpiyat2024.html" style="text-decoration:none; color:#000; display:block; padding:8px; border-radius:4px;">2024</a>
-    </li>
-    <li style="margin-bottom:8px;">
-      <a href="olimpiyat2020.html" style="text-decoration:none; color:#000; display:block; padding:8px; border-radius:4px;">2020</a>
-    </li>
-    <li style="margin-bottom:8px;">
-      <a href="olimpiyat2016.html" style="text-decoration:none; color:#000; display:block; padding:8px; border-radius:4px;">2016</a>
-    </li>
-    <!-- Daha eski olimpiyatlar da aynı formatta eklenebilir -->
-  </ul>
-</div>
+/* SOL SABİT MENÜ */
+#menu {
+  position:fixed;
+  left:0;
+  top:0;
+  width:180px;
+  height:100%;
+  background:#eaeaea;
+  padding:10px;
+  box-sizing:border-box;
+  font-size:14px;
+}
 
-<!-- Sol Menü Bitiş -->
+#menu a {
+  display:block;
+  margin-bottom:10px;
+  color:#000;
+  text-decoration:none;
+}
+
+#menu a:hover {
+  text-decoration:underline;
+}
+
 
 <!-- Ana İçerik Başlangıç -->
 <div id="content" style="margin-left:260px; padding:20px;">

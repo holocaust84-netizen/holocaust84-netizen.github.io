@@ -55,4 +55,58 @@ footer { position:fixed; bottom:10px; left:10px; font-size:14px; }
       <a href="olimpiyat1904.pdf" target="_blank">1904</a>
       <a href="olimpiyat1908.pdf" target="_blank">1908</a>
       <a href="olimpiyat1912.pdf" target="_blank">1912</a>
-      <a h
+      <a href="olimpiyat1920.pdf" target="_blank">1920</a>
+      <a href="olimpiyat1924.pdf" target="_blank">1924</a>
+      <a href="olimpiyat1928.pdf" target="_blank">1928</a>
+      <a href="olimpiyat1932.pdf" target="_blank">1932</a>
+      <a href="olimpiyat1936.pdf" target="_blank">1936</a>
+      <a href="olimpiyat1948.pdf" target="_blank">1948</a>
+      <a href="olimpiyat1952.pdf" target="_blank">1952</a>
+      <a href="olimpiyat1956.pdf" target="_blank">1956</a>
+      <a href="olimpiyat1960.pdf" target="_blank">1960</a>
+      <a href="olimpiyat1964.pdf" target="_blank">1964</a>
+      <a href="olimpiyat1968.pdf" target="_blank">1968</a>
+      <a href="olimpiyat1972.pdf" target="_blank">1972</a>
+      <a href="olimpiyat1976.pdf" target="_blank">1976</a>
+      <a href="olimpiyat1980.pdf" target="_blank">1980</a>
+      <a href="olimpiyat1984.pdf" target="_blank">1984</a>
+      <a href="olimpiyat1988.pdf" target="_blank">1988</a>
+      <a href="olimpiyat1992.pdf" target="_blank">1992</a>
+      <a href="olimpiyat1996.pdf" target="_blank">1996</a>
+      <a href="olimpiyat2000.pdf" target="_blank">2000</a>
+      <a href="olimpiyat2004.pdf" target="_blank">2004</a>
+      <a href="olimpiyat2008.pdf" target="_blank">2008</a>
+      <a href="olimpiyat2012.pdf" target="_blank">2012</a>
+      <a href="olimpiyat2016.pdf" target="_blank">2016</a>
+      <a href="olimpiyat2021.pdf" target="_blank">2021</a>
+      <a href="olimpiyat2024.pdf" target="_blank">2024</a>
+    </div>
+  </main>
+
+</div>
+
+<!-- Ziyaretçi Sayacı -->
+<div id="visitor-counter">
+  Ziyaretçi Sayısı: <span id="count">0</span>
+</div>
+
+<script>
+const USERNAME = 'holocaust84-netizen';
+const STORAGE_KEY = 'my_visitor_counter';
+
+let totalCount = localStorage.getItem(STORAGE_KEY);
+if (!totalCount) totalCount = 0;
+
+const visitedKey = 'visited_' + USERNAME;
+const hasVisited = localStorage.getItem(visitedKey);
+
+if (!hasVisited) {
+  totalCount = parseInt(totalCount) + 1;
+  localStorage.setItem(STORAGE_KEY, totalCount);
+  localStorage.setItem(visitedKey, 'true');
+}
+document.getElementById('count').textContent = totalCount;
+</script>
+
+</body>
+</html>

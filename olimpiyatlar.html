@@ -50,63 +50,9 @@ footer { position:fixed; bottom:10px; left:10px; font-size:14px; }
   <main>
     <h1>Olimpiyatlar</h1>
     <div class="year-links">
-      <a href="olimpiyat1896.pdf">1896</a>
-      <a href="olimpiyat1900.pdf">1900</a>
-      <a href="olimpiyat1904.pdf">1904</a>
-      <a href="olimpiyat1908.pdf">1908</a>
-      <a href="olimpiyat1912.pdf">1912</a>
-      <a href="olimpiyat1920.pdf">1920</a>
-      <a href="olimpiyat1924.pdf">1924</a>
-      <a href="olimpiyat1928.pdf">1928</a>
-      <a href="olimpiyat1932.pdf">1932</a>
-      <a href="olimpiyat1936.pdf">1936</a>
-      <a href="olimpiyat1948.pdf">1948</a>
-      <a href="olimpiyat1952.pdf">1952</a>
-      <a href="olimpiyat1956.pdf">1956</a>
-      <a href="olimpiyat1960.pdf">1960</a>
-      <a href="olimpiyat1964.pdf">1964</a>
-      <a href="olimpiyat1968.pdf">1968</a>
-      <a href="olimpiyat1972.pdf">1972</a>
-      <a href="olimpiyat1976.pdf">1976</a>
-      <a href="olimpiyat1980.pdf">1980</a>
-      <a href="olimpiyat1984.pdf">1984</a>
-      <a href="olimpiyat1988.pdf">1988</a>
-      <a href="olimpiyat1992.pdf">1992</a>
-      <a href="olimpiyat1996.pdf">1996</a>
-      <a href="olimpiyat2000.pdf">2000</a>
-      <a href="olimpiyat2004.pdf">2004</a>
-      <a href="olimpiyat2008.pdf">2008</a>
-      <a href="olimpiyat2012.pdf">2012</a>
-      <a href="olimpiyat2016.pdf">2016</a>
-      <a href="olimpiyat2021.pdf">2021</a>
-      <a href="olimpiyat2024.pdf">2024</a>
-    </div>
-  </main>
-
-</div>
-
-<!-- Ziyaretçi Sayacı -->
-<div id="visitor-counter">
-  Ziyaretçi Sayısı: <span id="count">0</span>
-</div>
-
-<script>
-const USERNAME = 'holocaust84-netizen';
-const STORAGE_KEY = 'my_visitor_counter';
-
-let totalCount = localStorage.getItem(STORAGE_KEY);
-if (!totalCount) totalCount = 0;
-
-const visitedKey = 'visited_' + USERNAME;
-const hasVisited = localStorage.getItem(visitedKey);
-
-if (!hasVisited) {
-  totalCount = parseInt(totalCount) + 1;
-  localStorage.setItem(STORAGE_KEY, totalCount);
-  localStorage.setItem(visitedKey, 'true');
-}
-document.getElementById('count').textContent = totalCount;
-</script>
-
-</body>
-</html>
+      <a href="olimpiyat1896.pdf" target="_blank">1896</a>
+      <a href="olimpiyat1900.pdf" target="_blank">1900</a>
+      <a href="olimpiyat1904.pdf" target="_blank">1904</a>
+      <a href="olimpiyat1908.pdf" target="_blank">1908</a>
+      <a href="olimpiyat1912.pdf" target="_blank">1912</a>
+      <a h

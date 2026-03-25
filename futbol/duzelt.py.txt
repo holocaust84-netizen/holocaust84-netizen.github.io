@@ -1,0 +1,38 @@
+from pathlib import Path
+
+root = Path(".")
+
+files = list(root.rglob("*.htm")) + list(root.rglob("*.html"))
+
+REPLACEMENTS = {
+    "Ã¼": "ü",
+    "Ãœ": "Ü",
+    "Ã¶": "ö",
+    "Ã–": "Ö",
+    "Ã§": "ç",
+    "Ã‡": "Ç",
+    "Ä±": "ı",
+    "Ä°": "İ",
+    "ÅŸ": "ş",
+    "Åž": "Ş",
+    "ÄŸ": "ğ",
+    "Äž": "Ğ",
+}
+
+def fix(text):
+    for bad, good in REPLACEMENTS.items():
+        text = text.replace(bad, good)
+    return text
+
+for path in files:
+    try:
+        text = path.read_text(encoding="utf-8")
+    except:
+        text = path.read_text(encoding="latin-1")
+
+    text = fix(text)
+
+    path.write_text(text, encoding="utf-8")
+    print("Düzeltildi:", path)
+
+print("Bitti.")

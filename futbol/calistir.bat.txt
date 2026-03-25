@@ -1,0 +1,3 @@
+@echo off
+python duzelt.py
+pause
